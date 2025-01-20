@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html">شهد</a></h1>
+        </div>
+    </header>
+
+    <div class="project-details">
+        <h2> Y2K planner (01.2022) </h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="im/pwanne 4.jpg" alt="Project 1 Image 1" onclick="enlargeImage(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="im/image 4.png" alt="Project 1 Image 2" onclick="enlargeImage(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="im/planner2.png" alt="Project 1 Image 3" onclick="enlargeImage(this)">
+
+        </div>
+        <p>This is an EP artwork I designed using my own Arabic caligraphy. I wanted to capture the playful yet innovative oriental sound of this record.</p>
+    </div>
+
+    <div id="lightbox" onclick="closeLightbox()">
+        <span id="lightbox-close">&times;</span>
+        <img id="lightbox-img">
+    </div>
+
+    <script>
+        function enlargeImage(img) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightbox.style.display = 'flex';
+            lightboxImg.src = img.src;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

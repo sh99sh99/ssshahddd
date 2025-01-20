@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html">شهد</a></h1>
+        </div>
+    </header>
+
+    <div class="project-details">
+        <h2>PRETEND (07.2023) </h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="im/juice 1.PNG" alt="Project 1 Image 1" onclick="enlargeImage(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="im/juice 3.PNG" alt="Project 1 Image 2" onclick="enlargeImage(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="im/juice 2.PNG" alt="Project 1 Image 3" onclick="enlargeImage(this)">
+
+        </div>
+        <p>This is a juice brand I came up with called Pretend, a healthy alternative to sugary carbonated drinks.</p>
+    </div>
+
+    <div id="lightbox" onclick="closeLightbox()">
+        <span id="lightbox-close">&times;</span>
+        <img id="lightbox-img">
+    </div>
+
+    <script>
+        function enlargeImage(img) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightbox.style.display = 'flex';
+            lightboxImg.src = img.src;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

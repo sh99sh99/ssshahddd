@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html">شهد</a></h1>
+        </div>
+    </header>
+
+    <div class="project-details">
+        <h2>E7ki (04.2024) </h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="im/image 8.png" alt="Project 1 Image 1" onclick="enlargeImage(this)">
+
+        </div>
+        <p>This is a poster design I did for Arabic Typography class based on Gestaltic principles.</p>
+    </div>
+
+    <div id="lightbox" onclick="closeLightbox()">
+        <span id="lightbox-close">&times;</span>
+        <img id="lightbox-img">
+    </div>
+
+    <script>
+        function enlargeImage(img) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightbox.style.display = 'flex';
+            lightboxImg.src = img.src;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
